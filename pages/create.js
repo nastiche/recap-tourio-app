@@ -14,7 +14,7 @@ export default function CreatePlacePage() {
   const { mutate } = useSWR("api/places");
 
   async function addPlace(place) {
-    const response = await fetch("api/places", {
+    const response = await fetch("/api/places", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
