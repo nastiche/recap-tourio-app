@@ -6,15 +6,27 @@ import { StyledLink } from "../../../components/StyledLink.js";
 import { StyledButton } from "../../../components/StyledButton.js";
 import { StyledImage } from "../../../components/StyledImage.js";
 
+const Wrapper = styled.div`
+  margin-top: 20px;
+  margin-bottom: 20px;
+`;
+
+const StyledTitle = styled.h2`
+  margin-top: 10px;
+  margin-bottom: 10px;
+`;
+
 const ImageContainer = styled.div`
   position: relative;
   height: 15rem;
+  margin-top: 10px;
 `;
 
 const ButtonContainer = styled.section`
   display: flex;
   justify-content: space-between;
   gap: 0.2rem;
+  margin-top: 25px;
 
   & > * {
     flex-grow: 1;
@@ -25,7 +37,8 @@ const ButtonContainer = styled.section`
 const StyledLocationLink = styled(StyledLink)`
   text-align: center;
   background-color: white;
-  border: 3px solid lightsalmon;
+  border: 3px solid #f15a00;
+  color: black;
 `;
 
 export default function DetailsPage() {
@@ -53,9 +66,11 @@ export default function DetailsPage() {
 
   return (
     <>
-      <Link href={"/"} passHref legacyBehavior>
-        <StyledLink justifySelf="start">back</StyledLink>
-      </Link>
+      <Wrapper>
+        <Link href={"/"} passHref legacyBehavior>
+          <StyledLink justifySelf="start">back</StyledLink>
+        </Link>
+      </Wrapper>
       <ImageContainer>
         <StyledImage
           src={place.image}
@@ -67,9 +82,9 @@ export default function DetailsPage() {
           alt=""
         />
       </ImageContainer>
-      <h2>
+      <StyledTitle>
         {place.name}, {place.location}
-      </h2>
+      </StyledTitle>
       <Link href={place.mapURL} passHref legacyBehavior>
         <StyledLocationLink>Location on Google Maps</StyledLocationLink>
       </Link>

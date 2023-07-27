@@ -1,10 +1,10 @@
 import styled, { css } from "styled-components";
 
 export const StyledLink = styled.a`
-  background-color: lightsalmon;
+  background-color: #6bb0e4;
   padding: 0.8rem 1.5rem;
   border-radius: 0.6rem;
-  color: black;
+  color: white;
   text-decoration: none;
   font-weight: bold;
 
@@ -19,6 +19,6 @@ export const StyledLink = styled.a`
     css`
       text-align: center;
       background-color: white;
-      border: 3px solid lightsalmon;
+      border: 3px solid #6bb0e4;
     `}
 `;

@@ -3,6 +3,17 @@ import Link from "next/link";
 import useSWR from "swr";
 import Form from "../../../components/Form.js";
 import { StyledLink } from "../../../components/StyledLink.js";
+import styled from "styled-components";
+
+const StyledTitle = styled.h2`
+  color: #fea022;
+  margin-bottom: 0.8rem;
+  margin-top: 20px;
+`;
+
+const Wrapper = styled.div`
+  margin-top: 20px;
+`;
 
 export default function EditPage() {
   const router = useRouter();
@@ -28,10 +39,12 @@ export default function EditPage() {
 
   return (
     <>
-      <h2 id="edit-place">Edit Place</h2>
-      <Link href={`/places/${id}`} passHref legacyBehavior>
-        <StyledLink justifySelf="start">back</StyledLink>
-      </Link>
+      <Wrapper>
+        <Link href={`/places/${id}`} passHref legacyBehavior>
+          <StyledLink justifySelf="start">back</StyledLink>
+        </Link>
+      </Wrapper>
+      <StyledTitle id="edit-place">Edit Place</StyledTitle>
       <Form onSubmit={editPlace} formName={"edit-place"} defaultData={place} />
     </>
   );

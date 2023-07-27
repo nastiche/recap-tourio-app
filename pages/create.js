@@ -9,6 +9,11 @@ const StyledBackLink = styled(StyledLink)`
   justify-self: flex-start;
 `;
 
+const StyledTitle = styled.h2`
+  color: #fea022;
+  margin-bottom: 5px;
+`;
+
 export default function CreatePlacePage() {
   const router = useRouter();
   const { mutate } = useSWR("api/places");
@@ -29,7 +34,7 @@ export default function CreatePlacePage() {
 
   return (
     <>
-      <h2 id="add-place">Add Place</h2>
+      <StyledTitle id="add-place">Add Place</StyledTitle>
       <Link href="/" passHref legacyBehavior>
         <StyledBackLink>back</StyledBackLink>
       </Link>
