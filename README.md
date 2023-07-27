@@ -1,6 +1,6 @@
 # Tourio App
 
-![tourio-app](public/tourio-app.png)
+![tourio-app](public/tourio-app-screenshot.png)
 
 ## Task
 
