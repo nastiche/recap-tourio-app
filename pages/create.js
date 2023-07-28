@@ -5,13 +5,10 @@ import Form from "../components/Form.js";
 import { StyledLink } from "../components/StyledLink.js";
 import useSWR from "swr";
 
-const StyledBackLink = styled(StyledLink)`
-  justify-self: flex-start;
-`;
-
 const StyledTitle = styled.h2`
-  color: #fea022;
-  margin-bottom: 5px;
+  color: #f15a00;
+  margin-bottom: 0.8rem;
+  margin-top: 10px;
 `;
 
 export default function CreatePlacePage() {
@@ -34,10 +31,26 @@ export default function CreatePlacePage() {
 
   return (
     <>
-      <StyledTitle id="add-place">Add Place</StyledTitle>
       <Link href="/" passHref legacyBehavior>
-        <StyledBackLink>back</StyledBackLink>
+        <StyledLink variant="back">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="3"
+            stroke="white"
+            width="30px"
+            height="30px"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3"
+            />
+          </svg>
+        </StyledLink>
       </Link>
+      <StyledTitle id="add-place">Add Place</StyledTitle>
       <Form onSubmit={addPlace} formName={"add-place"} />
     </>
   );

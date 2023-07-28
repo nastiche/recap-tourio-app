@@ -6,13 +6,9 @@ import { StyledLink } from "../../../components/StyledLink.js";
 import styled from "styled-components";
 
 const StyledTitle = styled.h2`
-  color: #fea022;
+  color: #f15a00;
   margin-bottom: 0.8rem;
-  margin-top: 20px;
-`;
-
-const Wrapper = styled.div`
-  margin-top: 20px;
+  margin-top: 10px;
 `;
 
 export default function EditPage() {
@@ -39,11 +35,25 @@ export default function EditPage() {
 
   return (
     <>
-      <Wrapper>
-        <Link href={`/places/${id}`} passHref legacyBehavior>
-          <StyledLink justifySelf="start">back</StyledLink>
-        </Link>
-      </Wrapper>
+      <Link href={`/places/${id}`} passHref legacyBehavior>
+        <StyledLink variant="back">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="3"
+            stroke="white"
+            width="30px"
+            height="30px"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3"
+            />
+          </svg>
+        </StyledLink>
+      </Link>
       <StyledTitle id="edit-place">Edit Place</StyledTitle>
       <Form onSubmit={editPlace} formName={"edit-place"} defaultData={place} />
     </>

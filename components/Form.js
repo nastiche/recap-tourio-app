@@ -9,7 +9,7 @@ const FormContainer = styled.form`
 const Input = styled.input`
   padding: 0.5rem;
   font-size: inherit;
-  border: 3px solid #fea022;
+  border: 1px solid #f15a00;
   border-radius: 0.5rem;
   font-family: inherit;
 `;
@@ -17,14 +17,14 @@ const Input = styled.input`
 const Textarea = styled.textarea`
   font-family: inherit;
   font-size: inherit;
-  border: 3px solid #fea022;
+  border: 1px solid #f15a00;
   border-radius: 0.5rem;
   padding: 0.5rem;
 `;
 
 const Label = styled.label`
   font-weight: bold;
-  color: #fea022;
+  color: #f15a00;
 `;
 
 export default function Form({ onSubmit, formName, defaultData }) {
